@@ -1,5 +1,6 @@
 .header {
     height: 82px;
+    border-bottom: solid 1px #ececec;
 
     a {
         text-decoration: none;
@@ -9,15 +10,6 @@
 
     img {
         width: 44%;
-    }
-
-    &__logo {
-        width: 15%;
-        
-        a {
-            display: flex;
-            align-items: center;
-        }
     }
 
     &__nav {

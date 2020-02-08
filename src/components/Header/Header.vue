@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        <div class="content-wrapper content-wrapper_header-stretch">
-            <div class="header__logo header-logo_left">
+        <div class="content-wrapper content-wrapper_stretch">
+            <div class="logo">
                 <router-link to="/">
                     <img src="../../assets/sitelogo.png" alt="logo">
                     <span>Store name</span>

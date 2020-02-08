@@ -22,7 +22,7 @@
         <ProductFilter />
 
         <!-- Products Conditional Rendering//Условная отрисовка продуктов -->
-        <div class="content-wrapper">
+        <div class="content-wrapper content-wrapper_vertical">
             <div class="products-grid">
                 <div class="products-grid__product" v-for="product in products" :key="product.id">
                     <img :src="require(`../../assets/products/${product.img}`)">
@@ -38,8 +38,8 @@
                             <div v-for="color in product.colors" :key="color" class="color-circle" :id="`circle-${color}`"></div>
                         </div>
                         <h4>{{ product.cost }} &#8381;</h4>
+                        <button class="catalog__button">В корзину</button>
                     </div>
-                    <button class="catalog__button">В корзину</button>
                 </div>
             </div>
         </div>

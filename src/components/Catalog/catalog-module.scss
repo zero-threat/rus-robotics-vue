@@ -1,13 +1,3 @@
-.content-wrapper {
-    max-width: 1056px;
-    margin: 0 auto;
-
-    &_header-stretch {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
 .catalog {
 
     &__button {
@@ -18,6 +8,8 @@
         cursor: pointer;
         font: unset;
         font-weight: 600;
+        flex-grow: 1;
+        margin-top: 23px;
 
         &:hover {
             background: #000000;
@@ -77,6 +69,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         span {
             color: #000000;
@@ -85,8 +78,8 @@
     }
 
     &__colors {
-        max-width: 40%;
-        width: 37%;
+        max-width: 60%;
+        width: 50%;
         display: flex;
         align-items: center;
         justify-content: space-between;
