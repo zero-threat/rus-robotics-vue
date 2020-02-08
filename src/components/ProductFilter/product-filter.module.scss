@@ -1,0 +1,40 @@
+.catalog-filter {
+    height: 100px;
+    background: #ececec;
+    display: flex;
+    align-items: center;
+
+    &__body {
+        width: 95.3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price-choose {
+        width: 32.3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            width: 30%;
+            height: 40px;
+            background: #ececec;
+            outline: none;
+            border: 1px solid #ccc;
+            text-indent: 5px;
+            font-size: 20px;
+            font-family: "Montserrat";
+            
+        }
+
+    }
+
+    &__color-choose {
+        width: 185px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

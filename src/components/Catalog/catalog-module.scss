@@ -1,0 +1,118 @@
+.content-wrapper {
+    max-width: 1056px;
+    margin: 0 auto;
+
+    &_header-stretch {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.catalog {
+
+    &__button {
+        height: 50px;
+        background: #ffffff;
+        border: solid 1px #000000;
+        outline: none;
+        cursor: pointer;
+        font: unset;
+        font-weight: 600;
+
+        &:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+    }
+
+    &__header {
+        height: 390px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            text-align: start;
+            width: 23%;
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+
+    &__spans {
+        width: 67%;
+        height: 185px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    h4 {
+        margin: 0;
+    }
+
+    &__product {
+        max-width: 26.8%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:nth-child(3n +2) {
+            margin: 0 5%;
+        }
+
+        span {
+            font-size: 15px;
+            color: #ccc;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: #000000;
+            font-size: 18px;
+        }
+    }
+
+    &__colors {
+        max-width: 40%;
+        width: 37%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.color-circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#circle-black {
+    background-color: #000000;
+}
+
+#circle-white {
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+}
+
+#circle-blue {
+    background-color: #01a4ea;
+}
+
+#circle-red {
+    background-color: #e03609;
+}

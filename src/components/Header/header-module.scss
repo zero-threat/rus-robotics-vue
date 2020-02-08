@@ -1,15 +1,54 @@
 .header {
     height: 82px;
 
-    &_stretched {
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    img {
+        width: 44%;
+    }
+
+    &__logo {
+        width: 15%;
+        
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__nav {
+        width: 16%;
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        box-sizing: border-box;
-        padding: 0 142px;
+    }
+
+    &-cart {
+        width: 14.2%;
+        display: flex;
+        align-items: center;
 
         img {
-            width: 85px;
-            height: 60px;
+            width: 42%;
+        }
+
+        a {
+            max-width: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__counter {
+            width: 20%;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #000000;
         }
     }
 }
