@@ -17,14 +17,12 @@
                 </div>
             </div>
         </div>
-            
-        <!-- Filter component -->
+                    <!-- Filter component -->
         <ProductFilter />
-
-        <!-- Products Conditional Rendering//Условная отрисовка продуктов -->
+                    <!-- Products Conditional Rendering//Условная отрисовка продуктов -->
         <div class="content-wrapper content-wrapper_vertical">
             <div class="products-grid">
-                <div class="products-grid__product" v-for="product in products" :key="product.id">
+                <div class="products-grid__product" v-for="product in getProducts" :key="product.id">
                     <img :src="require(`../../assets/products/${product.img}`)">
                     <div class="products-grid__description">
                         <h3>{{ product.title }}</h3>
@@ -35,7 +33,12 @@
                             <span>Цвета</span>
                             <!-- Отрисовка каждого цвета в массиве цветов каждого продукта -->
                             <!-- Rendering every color in every product's colors array -->
-                            <div v-for="color in product.colors" :key="color" class="color-circle" :id="`circle-${color}`"></div>
+                            <div
+                                class="color-circle"
+                                v-for="color in product.colors" 
+                                :key="color"
+                                :id="product.colors.length > 0 ? `circle-${color}` : `circle-black`"
+                            ></div>
                         </div>
                         <h4>{{ product.cost }} &#8381;</h4>
                         <button class="catalog__button">В корзину</button>
@@ -47,32 +50,18 @@
 </template>
 
 <script>
-    import ProductFilter from '../ProductFilter/ProductFilter'
-
+    import ProductFilter from '../ProductFilter/ProductFilter';
+    import { mapGetters } from 'vuex';
     export default {
+        components: { ProductFilter },
         data() {
             return {
-                products: [
-                    {
-                        id: '001',
-                        img: 'item__001.jpg',
-                        title: 'Обеденный стол Renno 100 см',
-                        description: 'Обеденный стол Renno от Storeforhome стильное решение для вашего пространства.',
-                        colors: ['black', 'white'],
-                        cost: 24500
-                    },
-                    {
-                        id: '002',
-                        img: 'item__002.jpg',
-                        title: 'Стул Elbert голубая ткань',
-                        description: 'С белой тканью тоже есть.',
-                        colors: ['blue', 'white'],
-                        cost: 9990
-                    }
-                ]
+
             }
         },
-        components: { ProductFilter }
+        computed: {
+            ...mapGetters(['getProducts'])
+        }
     }
 </script>
 
