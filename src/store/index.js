@@ -20,7 +20,7 @@ export default new Vuex.Store({
     },
     getCart: (state) => {
       return state.products.filter(el => state.cartProductsIds.includes(el.id));
-    },
+    }
     // getProductsByFilter(state, filter) {
     //   return state.products.filter(filter)
     // },

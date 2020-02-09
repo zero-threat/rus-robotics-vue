@@ -1,9 +1,9 @@
 <template>
     <div class="catalog">
         <div class="content-wrapper">
-            <div class="catalog__header">
+            <div class="content-box">
                 <h1>Стиль минимализм в интерьере</h1>
-                <div class="catalog__spans">
+                <div class="content-box__spans">
                     <span>
                         Стиль минимализм в интерьере – это дизайн, которому характерны сдержанность и строгость в оформлении. 
                         Главным образом она достигается посредством использования функциональных предметов интерьера, 
@@ -17,33 +17,14 @@
                 </div>
             </div>
         </div>
-                    <!-- Filter component -->
         <ProductFilter />
-                    <!-- Products Conditional Rendering//Условная отрисовка продуктов -->
         <div class="content-wrapper content-wrapper_vertical">
             <div class="products-grid">
-                <div class="products-grid__product" v-for="product in getProducts" :key="product.id">
-                    <img :src="require(`../../assets/products/${product.img}`)">
-                    <div class="products-grid__description">
-                        <h3>{{ product.title }}</h3>
-                        <span>{{ product.description }}</span>
-                    </div>
-                    <div class="products-grid__info">
-                        <div class="products-grid__colors">
-                            <span>Цвета</span>
-                            <!-- Отрисовка каждого цвета в массиве цветов каждого продукта -->
-                            <!-- Rendering every color in every product's colors array -->
-                            <div
-                                class="color-circle"
-                                v-for="color in product.colors" 
-                                :key="color"
-                                :id="product.colors.length > 0 ? `circle-${color}` : `circle-black`"
-                            ></div>
-                        </div>
-                        <h4>{{ product.cost }} &#8381;</h4>
-                        <button class="catalog__button">В корзину</button>
-                    </div>
-                </div>
+                <Product 
+                    v-for="product in getProducts" 
+                    :key="product.id" 
+                    :product="product"
+                />
             </div>
         </div>
     </div>
@@ -51,16 +32,20 @@
 
 <script>
     import ProductFilter from '../ProductFilter/ProductFilter';
+    import Product from '../Product/Product';
     import { mapGetters } from 'vuex';
     export default {
-        components: { ProductFilter },
+        components: { 
+            ProductFilter,
+            Product
+        },
         data() {
             return {
-
+                colors: this.getProduct
             }
         },
         computed: {
-            ...mapGetters(['getProducts'])
+            ...mapGetters(['getProducts']),
         }
     }
 </script>
