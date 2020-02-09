@@ -30,6 +30,27 @@
     }
   }
 
+  button {
+    display: block;
+    height: 50px;
+    background: #ffffff;
+    border: solid 1px #000000;
+    outline: none;
+    cursor: pointer;
+    font: unset;
+    font-weight: 600;
+    width: 100%;
+
+    &:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+  }
+
+  .button_margin {
+    margin-top: 23px
+  }
+
   .content-wrapper {
     max-width: 1056px;
     margin: 0 auto;

@@ -16,8 +16,8 @@
                     <img src="../../assets/cart.png" alt="Корзина">
                     <span>Корзина</span>
                 </router-link>
-                <div class="header-cart__counter">
-                    2
+                <div class="header-cart__counter" v-if="getCartItemsCount > 0">
+                    {{ getCartItemsCount }}
                 </div>
             </div>
         </div>
@@ -25,8 +25,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
     export default {
-        
+        computed: {
+            ...mapGetters(['getCartItemsCount'])
+        }
     }
 </script>
 

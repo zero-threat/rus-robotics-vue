@@ -1,14 +1,14 @@
 <template>
-    <div class="products-grid__product">
+    <div class="product product_margin">
         <img :src="require(`../../assets/products/${product.img}`)">
-        <div class="products-grid__description">
+        <div class="product__description">
             <h3>{{ product.title }}</h3>
             <span>{{ product.description }}</span>
         </div>
-        <div class="products-grid__info">
-            <div class="products-grid__footer">
+        <div class="product__info">
+            <div class="product__footer">
                 <span>Цвета</span>
-                <div class="products-grid__colors">
+                <div class="product__colors">
                     <!-- Отрисовка каждого цвета в массиве цветов каждого продукта -->
                     <!-- Rendering every color in every product's colors array -->
                     <div
@@ -20,15 +20,19 @@
                 </div>
             </div>
             <h4>{{ product.cost }} &#8381;</h4>
-            <button class="catalog__button">В корзину</button>
+            <button class="button_margin" @click="addToCart(product.id)">В корзину</button>
         </div>
     </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
     export default {
         props: {
             product: Object
+        },
+        methods: {
+            ...mapMutations(['addToCart'])
         },
         computed: {
             // if colors from props are'nt array, making them array
