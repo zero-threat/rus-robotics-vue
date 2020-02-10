@@ -53,8 +53,8 @@
     </div>
 </template>
 
-<script>
-    export default {
-        
+<style lang="scss">
+    .about {
+        padding-bottom: 100px;
     }
-</script>
+</style>

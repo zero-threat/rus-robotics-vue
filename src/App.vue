@@ -18,9 +18,20 @@
 </script>
 
 <style lang="scss">
+  body {
+    height: 100%;
+    min-width:900px;
+  }
+  
+  html { 
+    position:relative; 
+    min-height:100%;
+  }
+  
   #app {
     font-family: 'Montserrat', sans-serif;
   }
+
   .logo {
     width: 15%;
     

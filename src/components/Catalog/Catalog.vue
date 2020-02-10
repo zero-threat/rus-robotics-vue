@@ -21,7 +21,7 @@
         <div class="content-wrapper content-wrapper_vertical">
             <div class="products-grid">
                 <Product 
-                    v-for="product in getProducts" 
+                    v-for="product in getFilteredProducts" 
                     :key="product.id" 
                     :product="product"
                 />
@@ -39,13 +39,8 @@
             ProductFilter,
             Product
         },
-        data() {
-            return {
-                colors: this.getProduct
-            }
-        },
         computed: {
-            ...mapGetters(['getProducts']),
+            ...mapGetters(['getFilteredProducts'])
         }
     }
 </script>

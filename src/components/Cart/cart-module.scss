@@ -6,7 +6,15 @@
 .warn {
     position: absolute;
     left: 30%;
+    top: 40%;
     font-size: 25px;
+
+    &_on-filter {
+        left: 70%;
+        top: 29%;
+        font-size: 20px;
+        color: #e00505;
+    }
 }
 
 .product-list {

@@ -33,7 +33,7 @@
                 <h3>Оформление заказа</h3>
                 <span>
                     Кол-во
-                    <p>2</p>
+                    <p>{{ getCartItemsCount }}</p>
                 </span>
                 <span>
                     Доставка
@@ -41,7 +41,7 @@
                 </span>
                 <span>
                     Итого
-                    <p>34400 &#8381;</p>
+                    <p>{{ productsTotal }} &#8381;</p>
                 </span>
                 <form action="submit">
                     <input type="text" placeholder="ФИО" v-model="userName">
@@ -60,11 +60,15 @@
         data() {
             return {
                 userName: '',
-                userPhone: ''
+                userPhone: '',
+                productsTotal: 0
             }
         },
         computed: {
             ...mapGetters(['getCart', 'getCartItemsCount', 'getChosenColor'])
+        },
+        mounted() {
+            this.productsCostCounter()
         },
         methods: {
             ...mapMutations(['removeFromCart']),
@@ -74,6 +78,9 @@
             submitted() {
                 alert('Ваша заявка принята')
                 this.$store.state.cartProductsIds = []
+            },
+            productsCostCounter() {
+                this.getCart.forEach(el => this.productsTotal += +el.cost)
             }
         }
     }
