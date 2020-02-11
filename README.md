@@ -8,3 +8,6 @@ Vue.js, Vuex, Vue-router, font-awesome icons, google-fonts
 
 ## Верстка:
 Адаптив (брейкпоинты + резиновая), кроссбраузерность (IE 10+, Opera, Firefox, Chrome)
+
+## Запуск:
+npm sun serve в консоли
