@@ -41,6 +41,7 @@
     box-sizing: border-box;
     border: 1px solid #e5e5e5;
     padding: 30px;
+    flex-basis: 28%;
 
     span {
         width: 100%;
@@ -54,6 +55,7 @@
 
     form {
         text-align: center;
+        width: 100%;
     }
 
     input {
@@ -63,6 +65,7 @@
         padding: 10px 20px;
         font-size: 15px;
         font-family: 'Montserrat', sans-serif;
+        width: 100%;
 
         &:first-of-type {
             margin-bottom: 5px;
@@ -98,5 +101,57 @@
 
     &:after {
         transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .product-list {
+        width: 65%;
+    }
+
+    .order-checkout {
+        width: 30%;
+    }
+
+    .warn {
+        left: 20%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .cart {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-list {
+        width: 100%;
+    }
+
+    .order-checkout {
+        width: 80%;
+    }
+
+    .warn {
+        left: 20%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+    .product-list, .order-checkout {
+
+        span {
+            font-size: 12px;
+        }
+
+        img {
+            max-width: 40%;
+            max-height: 70%;
+        }
+
+        h3 {
+            font-size: 17px;
+        }
     }
 }

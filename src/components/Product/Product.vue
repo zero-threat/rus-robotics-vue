@@ -1,5 +1,5 @@
 <template>
-    <div class="product product_margin">
+    <div class="product">
         <img :src="require(`../../assets/products/${product.img}`)">
         <div class="product__description">
             <h3>{{ product.title }}</h3>

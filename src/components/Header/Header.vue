@@ -8,13 +8,19 @@
                 </router-link>
             </div>
             <nav class="header__nav">
-                <router-link to="/">Каталог</router-link>
-                <router-link to="/about">О нас</router-link>
+                <router-link 
+                    to="/" 
+                    :class="this.$route.path == '/' ? 'underline' : null"
+                >Каталог</router-link>
+                <router-link 
+                    to="/about"
+                    :class="this.$route.path == '/about' ? 'underline' : null"
+                >О нас</router-link>
             </nav>
             <div class="header-cart">
                 <router-link to="/cart">
                     <img src="../../assets/cart.png" alt="Корзина">
-                    <span>Корзина</span>
+                    <span :class="this.$route.path == '/cart' ? 'underline' : null">Корзина</span>
                 </router-link>
                 <div class="header-cart__counter" v-if="getCartItemsCount > 0">
                     {{ getCartItemsCount }}

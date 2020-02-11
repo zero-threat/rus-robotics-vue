@@ -5,6 +5,7 @@
 .products-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     h4 {
         margin: 0;
@@ -15,25 +16,19 @@
     max-width: 26.8%;
     height: 550px;
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 
     &_horizontal {
         flex-direction: row;
-        max-width: unset;
+        max-width: 100%;
         height: 255px;
         border-top: 1px solid #e5e5e5;
 
         &:last-child {
             border-bottom: 1px solid #e5e5e5;
-        }
-    }
-
-    &_margin {
-
-        &:nth-child(3n +2) {
-            margin: 0 5%;
         }
     }
 
@@ -118,3 +113,217 @@
 #circle-red {
     background-color: #e03609;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .product {
+        max-width: 40%;
+        justify-content: space-around;
+
+        &_horizontal {
+            max-width: unset;
+        }
+    }
+
+    .catalog {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .product {
+        max-width: 90%;
+        justify-content: space-around;
+
+        &_horizontal {
+            max-width: unset;
+        }
+    }
+
+    .products-grid {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+    .product {
+        max-width: 90%;
+        justify-content: space-around;
+    }
+
+    .products-grid {
+        justify-content: center;
+    }
+}
+
+body {
+    height: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+  
+  html { 
+    position: relative; 
+    min-height: 100%;
+  }
+
+  .logo {
+    width: 15%;
+    
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  button {
+    display: block;
+    height: 50px;
+    background: #ffffff;
+    border: solid 1px #000000;
+    outline: none;
+    cursor: pointer;
+    font: unset;
+    font-weight: 600;
+    width: 100%;
+
+    &:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+  }
+
+  .button_margin {
+    margin-top: 23px
+  }
+
+  .content-wrapper {
+    max-width: 1056px;
+    margin: 0 auto;
+
+    &_stretch {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_vertical {
+      margin: 110px auto;
+    }
+  }
+
+  .content-box {
+    height: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      text-align: start;
+      width: 24%;
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    h4 {
+      color: #ccc;
+      font-weight: 400;
+    }
+    
+    &__spans {
+      width: 67%;
+      height: 185px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__columns {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__column {
+      max-width: 40%;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .content-wrapper {
+      max-width: 768px;
+    }
+
+    .content-box {
+      font-size: 14px;
+
+      h1 {
+        width: 24%;
+        font-size: 30px;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 425px) and (max-width: 767px) {
+    .content-wrapper {
+      max-width: 425px;
+
+      &_vertical {
+        margin: 40px auto;
+      }
+    }
+
+    .content-box {
+      font-size: 13px;
+      flex-direction: column;
+      height: 360px;
+      justify-content: flex-start;
+
+      h1 {
+        width: 100%;
+        font-size: 18px;
+        text-align: unset;
+      }
+
+      &__spans {
+        width: 100%;
+        height: 300px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 424px) {
+    .content-wrapper {
+      max-width: 320px;
+
+      &_stretch {
+        justify-content: flex-start;
+      }
+
+      &_vertical {
+        margin: 40px auto;
+      }
+    }
+
+    .content-box {
+      font-size: 13px;
+      flex-direction: column;
+      height: 360px;
+      justify-content: flex-start;
+
+      h1 {
+        width: 100%;
+        font-size: 18px;
+        text-align: unset;
+      }
+
+      &__spans {
+        width: 100%;
+        height: 300px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
