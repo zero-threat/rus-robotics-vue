@@ -7,7 +7,7 @@ Vue.js, Vuex, Vue-router, font-awesome icons, google-fonts
 Каталог товаров с возможностью фильтрации и добавления в корзину
 
 ## Верстка:
-Адаптив (брейкпоинты + резиновая), кроссбраузерность (IE 10+, Opera, Firefox, Chrome)
+Адаптив (брейкпоинты + резиновая), кроссбраузерность (IE 10+, Opera, Firefox, Chrome), bem
 
 ## Запуск:
 npm sun serve в консоли
