@@ -1,24 +1,10 @@
-# rus-robotics
+## rus-robotics
 
-## Project setup
-```
-npm install
-```
+# Использованные инструменты: 
+Vue.js, Vuex, Vue-router, font-awesome icons, google-fonts
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Описание:
+Каталог товаров с возможностью фильтрации и добавления в корзину
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Верстка:
+Адаптив (брейкпоинты + резиновая), кроссбраузерность (IE 10+, Opera, Firefox, Chrome)
